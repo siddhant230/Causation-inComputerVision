@@ -1960,7 +1960,7 @@ The papers in this section focuses to use the concepts of Causality to increase 
          
          1) The author proposes to have a causal feature to teach the model both about the OOD and ID data points and take into account the $P^{OOD}$ and $P^{ID}$, i.e. the predictions of ID and OOD.
 
-         2) Based on the above predictions the it can be easily introspected that which one of the distributions is the model exploiting more and based on it they produce the second barnch of the model that scores for $S^{ID}$ and $S^{OOD}$ that are based on the equation `S_ID = 1/XE(P_GT, P_ID)`, where `XE` is the cross entropy loss. further these scores are used to compute weights `W_ID` and `W_OOD`, i.e. `W_OOD = S_OOD/(S_OOD + S_ID)` to train the model to blend the knowledge from both the OOD and ID data points. 
+         2) Based on the above predictions the it can be easily introspected that which one of the distributions is the model exploiting more and based on it they produce the second barnch of the model that scores for $S^{ID}$ and $S^{OOD}$ that are based on the equation $S_ID = 1/XE(P_GT, P_ID)$, where $X_E$ is the cross entropy loss. further these scores are used to compute weights $W_ID$ and $W_OOD$, i.e. $W_OOD = S_OOD/(S_OOD + S_ID)$ to train the model to blend the knowledge from both the OOD and ID data points. 
 
          $$
             s^{ID} = \sum_{a \epsilon A^{GT}}{} P^{ID} (a) = \frac{1}{
@@ -2083,7 +2083,7 @@ The papers in this section focuses to use the concepts of Causality to increase 
             <img src="imgs/Question-Conditioned Counterfactual Image Generation for VQA/architecture_diag.png" alt="architecture"/>
          </p> 
 
-         $I' = L(I|P) $
+         $I' = L(I|P)$
          where P is language prior; 
 
          the final lagrangian looks like
